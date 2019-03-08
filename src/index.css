@@ -10591,6 +10591,7 @@ body {
   background: #2D96B2;
   padding: 20px;
   border-radius: 15px;
+  height: 100%;
 }
 
 .item-wrapper img {
@@ -10635,5 +10636,28 @@ body {
 
 .slick-arrow {
   background: red !important;
+}
+
+.vertical {
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+.vertical .item-wrapper {
+  max-width: 300px;
+}
+
+.slick-slider .slick-prev, .slick-slider .slick-next {
+  width: 27px;
+  height: 27px;
+  border-radius: 20px;
+}
+
+.slick-slider .slick-prev:before, .slick-slider .slick-next:before {
+  opacity: 1;
+}
+
+.show-result {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=index.css.map */

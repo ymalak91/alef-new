@@ -55,10 +55,10 @@
     ],
     "layout": [
         {
-            "slide1": "v",
-            "slide2": "h",
-            "slide3": "v",
-            "slide4": "h"
+            "slide1": "h",
+            "slide2": "v",
+            "slide3": "h",
+            "slide4": "v"
         }
     ]
 }

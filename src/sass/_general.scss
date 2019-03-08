@@ -26,6 +26,7 @@ body {
         background: $green;
         padding: 20px;
         border-radius: 15px;
+        height: 100%;
     }
 
     img {
@@ -76,4 +77,29 @@ body {
 
 .slick-arrow {
     background: red !important;
+}
+
+.vertical {
+    margin-top: 60px;
+    margin-left: 35px;
+    .item-wrapper {
+        max-width: 300px;
+    }
+}
+
+
+.slick-slider {
+    .slick-prev, .slick-next {
+        width: 27px;
+        height: 27px;
+        border-radius: 20px;
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+
+.show-result {
+    margin-bottom: 20px; 
 }
