@@ -3,19 +3,74 @@ body {
 }
 
 .item-wrapper {
-    background: $green;
     color: $white;
-    padding: 20px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s ease;
+ 
+    &.selected {
+        background: $red;
+        
+    }
 
-    .selected {
-        p {
+    &.not-set {
+        background: $dark;
+        &:hover {
             background: $red;
         }
-      
+    }
+
+    .item-element {
+        background: $green;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    img {
+        width: 120px;
+    }
+}
+
+#col1 {
+    .item-wrapper {
+        padding-right: 15px;
+        &.selected {
+            &:before {
+                content: "";
+                position: absolute;
+                right: -8px;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                border-radius: 0 10px 10px 0px;
+                background: $red;
+                transition: all 0.5s ease;
+            }
+        }
+  
+    }
+}
+
+#col2 {
+    .item-wrapper {
+        padding-left: 15px;
+
+        &.selected {
+            background: $red;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -8px;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                border-radius: 10px 0 0 10px;
+                background: $red;
+            }
+        }
     }
 }
 

@@ -23,45 +23,74 @@ function makeArray(object) {
 }
 
 
-const contentArr = makeArray(Data.col1);
-const contentArrSuff = shuffleArray(contentArr);
-const listItems = contentArrSuff.map((contentArrSuff, index) =>
-    <Item key={index} content={contentArrSuff.text} id={contentArrSuff.id} type="question" />
-);
-
-const contentArr2 = makeArray(Data.col2);
-const contentArrSuff2 = shuffleArray(contentArr2);
-const listItems2 = contentArrSuff2.map((contentArrSuff2, index) =>
-    <Item key={index} content={contentArrSuff2.text} id={contentArrSuff2.id} type="answer" />
-);
-
-
 export default class Col extends Component {
+
     constructor(props) {
         super(props);
-
         this.state = {
-            qusetions: listItems,
-            answers: listItems2,
-            selected: ""
+            col1: false,
+            col2: false,
+            selected: []
         }
     }
-
     componentDidMount() {
 
 
     }
+
+    componentDidUpdate() {
+        console.log("Col Update");
+    }
+
+    clickedSameCol = (e) => {
+        // e.preventDefault();
+        if (e.currentTarget.id === "col1") {
+            console.log(e.currentTarget.id);
+            this.setState({
+                col1: true
+            });
+        }
+        if (e.currentTarget.id === "col2") {
+            this.setState({
+                col2: true
+            });
+        }
+    }
+
+    setStatus = () => {
+        console.log("setStatus");
+    }
+
+
     render() {
+
+        const contentArr = makeArray(Data.questions);
+        const contentArrSuff = shuffleArray(contentArr);
+
+        const contentArr2 = makeArray(Data.answers);
+        const contentArrSuff2 = shuffleArray(contentArr2);
+
         return (
             <React.Fragment>
                 <div className="row">
-                    <div className="col">
-                    <h2>Question</h2>
-                        {this.state.qusetions}
+                    <div id="col1" className="col">
+                        {contentArrSuff.map((contentArrSuff, index) =>
+                            <Item
+                                col="1"
+                                num={contentArrSuff.id}
+                                key={index}
+                                content={contentArrSuff.text} />
+                        )}
                     </div>
-                    <div className="col">
-                    <h2>Answer</h2>
-                        {this.state.answers}
+
+                    <div id="col2" className="col" >
+                        {contentArrSuff2.map((contentArrSuff2, index) =>
+                            <Item
+                                col="2"
+                                num={contentArrSuff2.id}
+                                key={index}
+                                content={contentArrSuff2.text} />
+                        )}
                     </div>
                 </div>
             </React.Fragment>

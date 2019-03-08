@@ -1,46 +1,64 @@
 {
-    "col1": {
-        "0": {
+    "questions": [
+        {
             "id": "1",
-            "text": "<p>text #1</p>"
+            "text": "<p>text #1 </p>"
         },
-        "1": {
+        {
             "id": "2",
-            "text": "<p>text #2</p>"
+            "text": "<p>text #2 </p>"
         },
-        "2": {
+        {
             "id": "3",
             "text": "<p>text #3</p>"
         },
-        "3": {
+        {
             "id": "4",
             "text": "<p>text #4</p>"
         },
-        "4": {
+        {
             "id": "5",
             "text": "<p>text #5</p>"
         }
-    },
-    "col2": {
-        "0": {
+    ],
+    "answers": [
+        {
             "id": "1",
-            "text": "<p>text match #1</p>"
+            "text": "<img src='images/pen.jpeg' /><p>solution 1</p>"
         },
-        "1": {
+        {
             "id": "2",
             "text": "<p>text match #2</p>"
         },
-        "2": {
+        {
             "id": "3",
             "text": "<p>text match #3</p>"
         },
-        "3": {
+        {
             "id": "4",
             "text": "<p>text match #4</p>"
         },
-        "4": {
+        {
             "id": "5",
             "text": "<p>text match #5</p>"
+        },
+        {
+            "id": "6",
+            "text": "<p>text match #6</p>"
         }
-    }
+    ],
+    "titles": [
+        {
+            "title1": "myCustomTitle1",
+            "title2": "myCustomTitle2"
+        }
+    ],
+    "layout": [
+        {
+            "slide1": "v",
+            "slide2": "h",
+            "slide3": "v",
+            "slide4": "h"
+        }
+    ]
 }
